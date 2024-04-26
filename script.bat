@@ -1,8 +1,6 @@
 @echo off
 cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16"
-if %errorlevel% neq 0 (
-    cd /d "%ProgramFiles%\Microsoft Office\Office16"
-)
+cd /d "%ProgramFiles%\Microsoft Office\Office16"
 for /f %%x in ('dir /b "..\root\Licenses16\ProPlus2021VL_KMS*.xrm-ms"') do (
     cscript ospp.vbs /inslic:"..\root\Licenses16\%%x"
 )
